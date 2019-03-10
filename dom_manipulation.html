@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dom manipulation program</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script type="text/javascript">
+    // function buttonclick()
+    // {
+    //     document.getElementById("heading2").innerHTML="You are hacked";
+    //     alert("Button is clicked");
+    // }
+
+    // function fn1()
+    // {
+    //     var str=document.getElementById("text1").value;
+    //     alert("Value inside the textbox is: "+str);
+    // }
+
+    function fn2()
+    {
+        var rd1=document.getElementById("rd1");
+        var rd2=document.getElementById("rd2");
+
+        if(rd1.checked==true)
+        {
+            alert("The channel selected is: "+rd1.value);
+        }
+        else if(rd2.checked==true){
+            alert("The channel selected is: "+rd2.value);
+        }
+        else
+        {
+            alert("Nothing is selected");
+        }
+    }
+
+    function fn3()
+    {
+        var select=document.getElementById("selectbox");
+        alert(select.options[select.selectedIndex].value);
+    }
+    </script>
+</head>
+<body>
+    <!-- <button onclick="buttonclick()">Click Me</button>
+    <h1 id="heading2">Some random text</h1> -->
+
+    <!-- <input type="text" id="text1" placeholder="Enter anything">
+    <br>
+    <button id="btn1" onclick="fn1()">Click Me</button> -->
+    
+    <input id="rd1" type="radio" name="grp1" value="simple snippets">Simple snippets<br>
+    <input id="rd2" type="radio" name="grp1" value="telusko learning">telusko learning<br>
+    <button onclick="fn2()">Click Me</button>
+</body>
+</html>

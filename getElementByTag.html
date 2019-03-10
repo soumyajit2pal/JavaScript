@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>GetElementByTag test</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+     <script type="text/javascript">
+     
+     function changestyle(){
+         var para=document.getElementsByTagName("p");
+        //  para[0].style.fontFamily="arial";
+        //  para[0].style.fontSize=25;
+        //  para[1].style.color="red";
+        //  para[2].style.fontWeight="bold";
+         for( var i=0;i<para.length;i++)
+         {
+            para[i].style.color="blue";
+            para[i].style.fontWeight="bold";
+            para[i].style.fontSize=30;
+         }   
+     }
+     
+     </script>
+ </head>
+ <body>
+     <p>This is paragraph 1</p>
+     <p>This is paragraph 2</p>
+     <p>This is paragraph 3</p>
+     <p>This is paragraph 4</p>
+<br>
+<button onclick="changestyle()">Click Me</button>
+ </body>
+ </html>

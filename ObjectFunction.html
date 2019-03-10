@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DEmo of ObjectConstructor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script type="text/javascript">
+    function cars(car_brand,car_model,car_price)
+    {
+        this.car_brand=car_brand;
+        this.car_model=car_model;
+        this.car_price=car_price;
+
+        this.autopilot=function()
+        {
+            document.write("<h2>Car is autopilot enable</h2>");
+        }
+    }
+    var c1=new cars("Tesla","model3",35000);
+    document.write("name of the cars is: "+c1.car_brand);
+    c1.autopilot();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

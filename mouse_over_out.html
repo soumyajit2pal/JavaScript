@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>mouseover and out</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script type="text/javascript">
+        function setnewimage()
+        {
+            document.getElementById("image").src="image/20181014_002708.jpg"
+        }
+        function setoldimage(){
+            document.getElementById("image").src="image/20181014_000902.jpg";
+        }
+    
+    
+    </script>
+</head>
+<body>
+    <img id="image" onmouseover="setnewimage()" onmouseout="setoldimage()" src="image/20181014_000902.jpg" width="300"/>
+</body>
+</html>
