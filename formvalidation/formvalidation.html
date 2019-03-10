@@ -7,19 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script type="text/javascript">
-
+        function validate()
+        {
+        var username=document.getElementById('uname');
+        var password=document.getElementById('pass');
+        if(username.value.trim()==""){
+            //alert("Blank username");
+            username.style.border="solid 3px red";
+            document.getElementById("ubluser").style.visibility="visible";
+            return false;
+        }
+        else if(password.value.trim()==""){
+            //alert("Blank username");
+            password.style.border="solid 3px red";
+            document.getElementById("pbluser").style.visibility="visible";
+            return false;
+        }
+        else if(password.value.trim().length<5)
+        {
+            //alert("Password too short");
+            document.getElementById("pbluser").style.visibility="visible";            
+            document.getElementById("pbluser").innerHTML="Password length must be greater then 5";
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
     </script>
 </head>
 <body>
     <div class="container">
-        <form>
+        <form onsubmit="return validate()" action="welcome.html">
             <div class="form-group">
                 <label for="uname">Username:</label>
-                <input type="text" class="form-control" id="uname">
+                <input type="text" class="form-control" id="uname" >
+                <label id="ubluser" style="color:red; visibility: hidden;">Invalid Username</label>
             </div>
             <div class="form-group">
                 <label for="pass">Password:</label>
                 <input type="password" class="form-control" id="pass">
+                <label id="pbluser" style="color:red; visibility: hidden;">Invalid Password</label>            
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
