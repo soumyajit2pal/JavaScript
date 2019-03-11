@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Email Address validation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+<script>
+    function validate()
+    {
+        var email=document.getElementById("email").value;
+        var regx=/^([a-z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/
+			if(regx.test(email))
+            {
+                document.getElementById("lblemail").innerHTML="Valid";                
+                document.getElementById("lblemail").style.visibility="visible";
+                document.getElementById("lblemail").style.color="green";
+            }
+			else
+			{
+                document.getElementById("lblemail").innerHTML="InValid";                
+                document.getElementById("lblemail").style.visibility="visible";
+                document.getElementById("lblemail").style.color="red";
+            }
+	}
+</script>
+</head>
+<body>
+    <form>
+        <input id="email" placeholder="Enter email address" type="text">
+        <label id="lblemail" style="color:red; visibility: hidden;">Invalid</label>
+        <br><button onclick="validate()" type="button">Submit</button>
+    </form>
+</body>
+</html>
